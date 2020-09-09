@@ -80,7 +80,7 @@ Z_0 = (x1_0, Vx1_0,
 solve_sys = odeint(func,Z_0,t)
 
 # Модуль анимации
-fig,ax = plt.subplots()
+fig,ax = plt.subplots(figsize=(8,8))
 
 # Создание маркеров планет и объектов
 Obj_1,=plt.plot([],[],marker='.',markersize=30, color='green')
@@ -93,8 +93,8 @@ def animate(i):
     Obj_2.set_data(solve_sys[i,4],solve_sys[i,6])
     Obj_ast.set_data(solve_sys[i,8],solve_sys[i,10])
     
-#Определение временного периода
-#ax.set_title('time, minutes {}x10'.format(i))
+    #Определение временного периода
+#    ax.set_title('time, minutes {}x10'.format(i))
 
 ast_animation = anim.FuncAnimation(fig,animate,frames=1400,interval=1)
 
