@@ -14,8 +14,8 @@ def grafics(L1,E1,L2,E2):
     plt.plot(x1,y1,color='red', label='d=10000 км')
     plt.plot(x2,y2,color='blue', label='d=50000 км')
 
-    plt.xlabel('Расстояние до места подрыва')                      #Подпись оси Ох
-    plt.ylabel('Мощность ядерного взрыва')                         #Подпись оси Оу
+    plt.xlabel('Расстояние до места подрыва, км')                      #Подпись оси Ох
+    plt.ylabel('Мощность ядерного взрыва, Мт')                         #Подпись оси Оу
     plt.grid()
     plt.legend()
     plt.xlim(0, 2.1*10**8)
